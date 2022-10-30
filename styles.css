@@ -28,9 +28,15 @@ body {
   
   
 }
-hr.new {
-  color: blue;
-  border: 2px solid blueviolet;
+.uloko {
+  text-align: center;
+  padding: 30px;
+  font-size: 15px;
+  border: 1px solid grey;
+  color: aqua;
+  border-width: 2px;
+  
+  
 }
 
 .links {
