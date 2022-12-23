@@ -88,7 +88,25 @@
     </a>
 
     <div align="center"><p class="standard">Do you want a copy of this script...?  <a href="https://www.github.com/abrahamdominic/socialmediahandles" target="_blank">Click here</a> </p></div>
+<script>
+function displayIpInfo() {
+  fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => {
+      const ip = data.ip;
+      document.getElementById('ip').innerHTML = `Your IP address is: ${ip}`;
 
+      fetch(`https://ipapi.co/${ip}/json/`)
+        .then(response => response.json())
+        .then(data => {
+          const location = `${data.city}, ${data.region} ${data.postal} ${data.country_name}`;
+          document.getElementById('location').innerHTML = `Your location is: ${location}`;
+        });
+    });
+}
+
+displayIpInfo();
+</script>
 <footer>
     
 
